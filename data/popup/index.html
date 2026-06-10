@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feather Tab Optimizer </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="popup-card">
+    <div class="header">
+      <img class="logo" src="/data/icons/32.png" alt="Logo">
+      <h1>Feather</h1>
+    </div>
+    
+    <div class="status-container">
+      <span class="status-label">Extension Status</span>
+      <span id="status-text" class="status-value active">Enabled</span>
+    </div>
+    
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="enable-toggle" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Options Section -->
+    <div class="options-container">
+      <div class="option-row">
+        <div class="option-info">
+          <span class="option-title">Auto-discard background tabs</span>
+          <span class="option-desc">Automatically discard tabs after 5 seconds</span>
+        </div>
+        <label class="checkbox-container">
+          <input type="checkbox" id="auto-discard-toggle">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <div class="option-row">
+        <div class="option-info">
+          <span class="option-title">Suspend background links</span>
+          <span class="option-desc">Discard Ctrl+Clicked tabs before they load</span>
+        </div>
+        <label class="checkbox-container">
+          <input type="checkbox" id="suspend-links-toggle" checked>
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Action Section -->
+    <div class="action-container">
+      <button id="discard-now-btn" class="btn btn-primary">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Discard All Tabs</span>
+      </button>
+      <div id="action-status" class="action-status-text"></div>
+    </div>
+    
+    <div class="info-footer">
+      <div class="info-row">
+        <span class="dot green"></span>
+        <p>All tabs (including active) can be suspended</p>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+   "manifest_version": 3,
+   "name": "Feather Tab Optimizer",
+   "version": "1.0",
+   "description": "Ultra-lightweight tab suspension. Natively discard tabs to save memory with zero overhead.",
+   "icons": {
+      "16": "/data/icons/16.png",
+      "32": "/data/icons/32.png",
+      "48": "/data/icons/48.png",
+      "64": "/data/icons/64.png",
+      "128": "/data/icons/128.png",
+      "256": "/data/icons/256.png",
+      "512": "/data/icons/512.png"
+   },
+   "background": {
+      "service_worker": "worker/background.js",
+      "type": "module"
+   },
+   "action": {
+      "default_popup": "/data/popup/index.html"
+   },
+   "permissions": [
+      "storage",
+      "tabs",
+      "webNavigation"
+   ]
+}
